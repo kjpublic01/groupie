@@ -1,7 +1,9 @@
 package com.xwray.groupie.example.item;
 
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.PagerSnapHelper;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SnapHelper;
 
 import com.xwray.groupie.Item;
 import com.xwray.groupie.example.databinding.ItemCarouselBinding;
@@ -26,6 +28,7 @@ public class CarouselItem extends Item<ItemCarouselBinding> {
         layoutManager = new LinearLayoutManager(recyclerView.getContext(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
+        new PagerSnapHelper().attachToRecyclerView(recyclerView);
 
         // We don't know if the layout we're passed has been bound before so
         // we need to ensure we don't register the item decoration multiple times,

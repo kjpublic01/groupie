@@ -29,6 +29,7 @@ import com.xwray.groupie.example.decoration.HeaderItemDecoration;
 import com.xwray.groupie.example.decoration.InsetItemDecoration;
 import com.xwray.groupie.example.decoration.SwipeTouchCallback;
 import com.xwray.groupie.example.item.CardItem;
+import com.xwray.groupie.example.item.CarouselAdapter;
 import com.xwray.groupie.example.item.CarouselCardItem;
 import com.xwray.groupie.example.item.CarouselItem;
 import com.xwray.groupie.example.item.ColumnItem;
@@ -215,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
 
     private CarouselItem makeCarouselItem() {
         CarouselItemDecoration carouselDecoration = new CarouselItemDecoration(gray, betweenPadding);
-        GroupAdapter carouselAdapter = new GroupAdapter();
+        GroupAdapter carouselAdapter = new CarouselAdapter();
         for (int i = 0; i < 30; i++) {
             carouselAdapter.add(new CarouselCardItem(rainbow200[7]));
         }
